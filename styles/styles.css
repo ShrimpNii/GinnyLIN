@@ -1,0 +1,447 @@
+@charset "UTF-8";
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "openhuninn";
+  src: url("./fonts/jf-openhuninn-1.1.ttf") format("truetype"), url("./fonts/jf-openhuninn-1.1.eot") format("embedded-opentype"), url("./fonts/jf-openhuninn-1.1.otf") format("opentype"), url("./fonts/jf-openhuninn-1.1.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body,
+input,
+button {
+  font-family: "openhuninn", "NotoSansTC", Tahoma, Verdana, "PingFang TC", "Heiti TC", "微軟正黑體", sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.yellow {
+  color: #f3dfa2;
+}
+
+.white {
+  color: white;
+}
+
+nav {
+  width: 100vw;
+  height: 50px;
+  background-color: #f3dfa2;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  font-weight: 900;
+  -webkit-transition: all 1s 0s ease;
+  transition: all 1s 0s ease;
+}
+
+nav a:hover {
+  color: #03b5aa;
+}
+
+nav .logo {
+  color: #335c81;
+}
+
+nav img {
+  height: 50px;
+}
+
+#main {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 50px;
+  background: url("../images/GinnyLIN_01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% bottom;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main div {
+  margin-left: 20%;
+  margin-bottom: 5%;
+}
+
+#main button {
+  background-color: #03b5aa;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  height: 35px;
+  padding: 0px 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s 0s ease-in-out;
+  transition: background-color 0.5s 0s ease-in-out;
+}
+
+#main button:hover {
+  background-color: #f3dfa2;
+}
+
+#about {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: #335c81;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about h2 {
+  color: white;
+  text-align: center;
+}
+
+#about ul {
+  margin: 30px 10%;
+  border-left: 3px solid #f3dfa2;
+  padding-left: 15px;
+  color: white;
+  line-height: 2;
+}
+
+#about ul a {
+  color: #f3dfa2;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.images-wrap {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.images-wrap .image-item {
+  height: 270px;
+  width: 360px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.images-wrap .image-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 8px;
+}
+
+#portfolio {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: #03b5aa;
+}
+
+#portfolio h2 {
+  color: white;
+  text-align: center;
+}
+
+#portfolio .container {
+  padding: 30px 50px;
+}
+
+#portfolio .container .others {
+  margin: 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+#portfolio .container .item {
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#portfolio .container .item img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#EscapeME {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+#EscapeME .esme-img {
+  width: 40%;
+  min-width: 350px;
+}
+
+#EscapeME .esme-img img {
+  width: 90%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+#EscapeME .intro {
+  border-left: 3px solid #f3dfa2;
+  padding-left: 20px;
+  color: #333533;
+  width: 55%;
+}
+
+#EscapeME .intro h3 {
+  font-weight: 900;
+  color: #f3dfa2;
+  margin-bottom: 20px;
+}
+
+#EscapeME .intro p {
+  margin-bottom: 10px;
+}
+
+#EscapeME .intro a {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #335c81;
+  color: white;
+}
+
+footer {
+  height: 100px;
+  background-color: #335c81;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: white;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+footer a {
+  color: white;
+  font-size: 20px;
+}

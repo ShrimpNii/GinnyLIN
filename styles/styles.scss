@@ -1,0 +1,258 @@
+@import "boxsizing.scss";
+@import "reset.scss";
+
+// ========================
+//
+// ========================
+
+// ========================
+// color
+// ========================
+$c-blue: #335c81;
+$c-yellow: #f3dfa2;
+$c-light-blue: #03b5aa;
+
+// ========================
+// font
+// ========================
+@font-face {
+  font-family: "openhuninn";
+  src: url("./fonts/jf-openhuninn-1.1.ttf") format("truetype"),
+    url("./fonts/jf-openhuninn-1.1.eot") format("embedded-opentype"),
+    url("./fonts/jf-openhuninn-1.1.otf") format("opentype"),
+    url("./fonts/jf-openhuninn-1.1.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body,
+input,
+button {
+  font-family: "openhuninn", "NotoSansTC", Tahoma, Verdana, "PingFang TC",
+    "Heiti TC", "微軟正黑體", sans-serif;
+  line-height: 1.5;
+}
+// ========================
+// font-size
+// ========================
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+p {
+  font-size: 18px;
+}
+
+// ========================
+// text-color
+// ========================
+.yellow {
+  color: $c-yellow;
+}
+.white {
+  color: white;
+}
+
+// =========================================================
+nav {
+  width: 100vw;
+  height: 50px;
+  background-color: $c-yellow;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  a {
+    color: white;
+    font-weight: 900;
+    &:hover {
+      color: $c-light-blue;
+    }
+    transition: all 1s 0s ease;
+  }
+  .logo {
+    color: $c-blue;
+  }
+  img {
+    height: 50px;
+  }
+}
+
+#main {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 50px;
+  //   background-color: $c-blue;
+  background: url("../images/GinnyLIN_01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% bottom;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    margin-left: 20%;
+    margin-bottom: 5%;
+  }
+  button {
+    background-color: $c-light-blue;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    height: 35px;
+    padding: 0px 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    &:hover {
+      background-color: $c-yellow;
+    }
+    transition: background-color 0.5s 0s ease-in-out;
+  }
+}
+#about {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: $c-blue;
+  justify-content: center;
+  h2 {
+    color: white;
+    text-align: center;
+  }
+  ul {
+    margin: 30px 10%;
+    border-left: 3px solid $c-yellow;
+    padding-left: 15px;
+    color: white;
+    line-height: 2;
+    a {
+      color: $c-yellow;
+      font-size: 14px;
+      padding-left: 5px;
+    }
+  }
+}
+.images-wrap {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .image-item {
+    height: 270px;
+    width: 360px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 8px;
+    }
+  }
+}
+#portfolio {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: $c-light-blue;
+  h2 {
+    color: white;
+    text-align: center;
+  }
+  .container {
+    padding: 30px 50px;
+    .others {
+      margin: 40px 0px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .item {
+      width: 300px;
+
+      // background-color: $c-blue;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      padding: 10px;
+
+      img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+#EscapeME {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  .esme-img {
+    width: 40%;
+    min-width: 350px;
+    img {
+      width: 90%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      cursor: pointer;
+    }
+  }
+  .intro {
+    border-left: 3px solid $c-yellow;
+    padding-left: 20px;
+    color: #333533;
+    width: 55%;
+    h3 {
+      font-weight: 900;
+      color: $c-yellow;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 10px;
+      background-color: $c-blue;
+      color: white;
+    }
+  }
+}
+footer {
+  height: 100px;
+  background-color: $c-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  p {
+    font-size: 16px;
+  }
+  a {
+    color: white;
+    font-size: 20px;
+  }
+}

@@ -63,8 +63,8 @@ nav {
   width: 100vw;
   height: 50px;
   background-color: $c-yellow;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,8 +79,10 @@ nav {
     }
     transition: all 1s 0s ease;
   }
-  .logo {
+  .name {
     color: $c-blue;
+    font-size: 20px;
+    font-weight: 900;
   }
   img {
     height: 50px;
@@ -125,7 +127,6 @@ nav {
 }
 #about {
   width: 100vw;
-  min-height: 100vh;
   padding-top: 50px;
   padding-bottom: 20px;
   background-color: $c-blue;
@@ -139,7 +140,9 @@ nav {
     border-left: 3px solid $c-yellow;
     padding-left: 15px;
     color: white;
-    line-height: 2;
+    li{
+      margin-bottom: 15px;
+    }
     a {
       color: $c-yellow;
       font-size: 14px;
@@ -155,9 +158,9 @@ nav {
   gap: 20px;
 
   .image-item {
-    height: 270px;
-    width: 360px;
-    background-color: white;
+    height: 240px;
+    width: 320px;
+    border:  2px solid white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
@@ -165,13 +168,12 @@ nav {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      padding: 8px;
+      padding: 10px;
     }
   }
 }
 #portfolio {
   width: 100vw;
-  min-height: 100vh;
   padding-top: 50px;
   background-color: $c-light-blue;
   h2 {
@@ -205,15 +207,13 @@ nav {
   }
 }
 #EscapeME {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
   .esme-img {
-    width: 40%;
-    min-width: 350px;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     img {
-      width: 90%;
+      width: 100%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       cursor: pointer;
     }
@@ -222,7 +222,6 @@ nav {
     border-left: 3px solid $c-yellow;
     padding-left: 20px;
     color: #333533;
-    width: 55%;
     h3 {
       font-weight: 900;
       color: $c-yellow;
@@ -233,6 +232,7 @@ nav {
     }
     a {
       display: inline-block;
+      margin: 10px;
       padding: 5px 15px;
       border-radius: 10px;
       background-color: $c-blue;
@@ -254,5 +254,36 @@ footer {
   a {
     color: white;
     font-size: 20px;
+  }
+}
+
+// =====================
+// RWD
+// =====================
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  #portfolio {
+    #EscapeME{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    gap: 30px;
+    .esme-img {
+      width: 40%;
+      max-width: none;
+      margin-bottom: 0px;
+      img {
+        width: 90%;
+      }
+    }
+    .intro {
+
+      width: 55%;
+    }
   }
 }

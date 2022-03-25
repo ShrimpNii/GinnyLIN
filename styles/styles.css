@@ -188,8 +188,8 @@ nav {
   width: 100vw;
   height: 50px;
   background-color: #f3dfa2;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,8 +215,10 @@ nav a:hover {
   color: #03b5aa;
 }
 
-nav .logo {
+nav .name {
   color: #335c81;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 nav img {
@@ -272,7 +274,6 @@ nav img {
 
 #about {
   width: 100vw;
-  min-height: 100vh;
   padding-top: 50px;
   padding-bottom: 20px;
   background-color: #335c81;
@@ -291,7 +292,10 @@ nav img {
   border-left: 3px solid #f3dfa2;
   padding-left: 15px;
   color: white;
-  line-height: 2;
+}
+
+#about ul li {
+  margin-bottom: 15px;
 }
 
 #about ul a {
@@ -314,9 +318,9 @@ nav img {
 }
 
 .images-wrap .image-item {
-  height: 270px;
-  width: 360px;
-  background-color: white;
+  height: 240px;
+  width: 320px;
+  border: 2px solid white;
   border-radius: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -327,12 +331,11 @@ nav img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 8px;
+  padding: 10px;
 }
 
 #portfolio {
   width: 100vw;
-  min-height: 100vh;
   padding-top: 50px;
   background-color: #03b5aa;
 }
@@ -372,25 +375,15 @@ nav img {
      object-fit: cover;
 }
 
-#EscapeME {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
-
 #EscapeME .esme-img {
-  width: 40%;
-  min-width: 350px;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 #EscapeME .esme-img img {
-  width: 90%;
+  width: 100%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
@@ -400,7 +393,6 @@ nav img {
   border-left: 3px solid #f3dfa2;
   padding-left: 20px;
   color: #333533;
-  width: 55%;
 }
 
 #EscapeME .intro h3 {
@@ -415,6 +407,7 @@ nav img {
 
 #EscapeME .intro a {
   display: inline-block;
+  margin: 10px;
   padding: 5px 15px;
   border-radius: 10px;
   background-color: #335c81;
@@ -444,4 +437,35 @@ footer p {
 footer a {
   color: white;
   font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  #portfolio {
+    gap: 30px;
+  }
+  #portfolio #EscapeME {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #portfolio .esme-img {
+    width: 40%;
+    max-width: none;
+    margin-bottom: 0px;
+  }
+  #portfolio .esme-img img {
+    width: 90%;
+  }
+  #portfolio .intro {
+    width: 55%;
+  }
 }
